@@ -1,0 +1,14 @@
+diff --git a/src/lib.rs b/src/lib.rs
+index 03f37d9..5f892ea 100644
+--- a/src/lib.rs
++++ b/src/lib.rs
+@@ -388,3 +388,8 @@ mod timespec;
+     all(linux_kernel, feature = "net")
+ ))]
+ mod ugid;
++
++/// Hello world
++pub fn hello_world() {
++    println!("Hello world from rustix");
++}
+\ No newline at end of file

@@ -1,0 +1,18 @@
+[package]
+name = "patch-crate-example"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html.
+[package.metadata.patch]
+crates = ["rustix"]
+
+[patch.crates-io]
+rustix = { path="./target/patch/rustix-0.38.21" }
+
+[dependencies]
+smallvec = "1.11.1"
+rustix = "0.38.21"
+
+[build-dependencies]
+patch-crate = "0.1.3"
